@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Web", "PortkablePass.Web\PortkablePass.Web.csproj", "{E1704B19-B8C8-4042-8D91-A5D9AFF2239A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Tests", "PortkablePass.Tests\PortkablePass.Tests.csproj", "{17802973-EF80-4F9A-A430-06EDB75EDE77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Interfaces", "PortkablePass.Interfaces\PortkablePass.Interfaces.csproj", "{06145C16-282B-4190-8124-B58DF8C1756C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Cryptography", "PortkablePass.Cryptography\PortkablePass.Cryptography.csproj", "{5655224B-C4E0-4A34-BE6F-29ECCEF964DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Mobile", "PortkablePass.Mobile\PortkablePass.Mobile.csproj", "{46BCD480-B236-4E11-93FF-5E925549E71F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1704B19-B8C8-4042-8D91-A5D9AFF2239A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1704B19-B8C8-4042-8D91-A5D9AFF2239A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1704B19-B8C8-4042-8D91-A5D9AFF2239A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1704B19-B8C8-4042-8D91-A5D9AFF2239A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17802973-EF80-4F9A-A430-06EDB75EDE77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17802973-EF80-4F9A-A430-06EDB75EDE77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17802973-EF80-4F9A-A430-06EDB75EDE77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17802973-EF80-4F9A-A430-06EDB75EDE77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06145C16-282B-4190-8124-B58DF8C1756C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06145C16-282B-4190-8124-B58DF8C1756C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06145C16-282B-4190-8124-B58DF8C1756C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06145C16-282B-4190-8124-B58DF8C1756C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5655224B-C4E0-4A34-BE6F-29ECCEF964DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5655224B-C4E0-4A34-BE6F-29ECCEF964DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5655224B-C4E0-4A34-BE6F-29ECCEF964DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5655224B-C4E0-4A34-BE6F-29ECCEF964DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46BCD480-B236-4E11-93FF-5E925549E71F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46BCD480-B236-4E11-93FF-5E925549E71F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46BCD480-B236-4E11-93FF-5E925549E71F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{46BCD480-B236-4E11-93FF-5E925549E71F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46BCD480-B236-4E11-93FF-5E925549E71F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46BCD480-B236-4E11-93FF-5E925549E71F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF6D5639-50CD-463F-9ED1-C8CAE831B943}
+	EndGlobalSection
+EndGlobal
