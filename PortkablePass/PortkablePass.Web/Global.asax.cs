@@ -13,9 +13,11 @@ namespace PortkablePass.Web
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            FilterConfiguration.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfiguration.RegisterRoutes(RouteTable.Routes);
+            BundleConfiguration.RegisterBundles(BundleTable.Bundles);
+
+            InversionOfControlConfiguration.BuildContainer();
         }
     }
 }
