@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestFixtures\HmacSha1GeneratorTest.cs" />
     <Compile Include="TestFixtures\Sha1HasherTest.cs" />
     <Compile Include="TestFixtures\Utf8ConverterTest.cs" />
     <Compile Include="TestFixtures\ExampleTest.cs" />
