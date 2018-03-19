@@ -58,12 +58,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestFixtures\Utf8ConverterTest.cs" />
     <Compile Include="TestFixtures\ExampleTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PortkablePass.Cryptography\PortkablePass.Cryptography.csproj">
+      <Project>{5655224b-c4e0-4a34-be6f-29eccef964db}</Project>
+      <Name>PortkablePass.Cryptography</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortkablePass.Encoding\PortkablePass.Encoding.csproj">
+      <Project>{562ee366-b3f0-46ae-8e32-381586435e24}</Project>
+      <Name>PortkablePass.Encoding</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortkablePass.Interfaces\PortkablePass.Interfaces.csproj">
+      <Project>{06145c16-282b-4190-8124-b58df8c1756c}</Project>
+      <Name>PortkablePass.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{06145C16-282B-4190-8124-B58DF8C1756C}</ProjectGuid>
+    <ProjectGuid>{562EE366-B3F0-46AE-8E32-381586435E24}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PortkablePass.Interfaces</RootNamespace>
-    <AssemblyName>PortkablePass.Interfaces</AssemblyName>
+    <RootNamespace>PortkablePass.Encoding</RootNamespace>
+    <AssemblyName>PortkablePass.Encoding</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,7 +20,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\PortkablePass.Interfaces.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -41,15 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dependencies\IDependency.cs" />
-    <Compile Include="Dependencies\RegistrationRelated\IAsImplementedInterfacesDependency.cs" />
-    <Compile Include="Dependencies\RegistrationRelated\IAsSelfRegistrationDependency.cs" />
-    <Compile Include="Dependencies\ScopeRelated\IInstancePerDependency.cs" />
-    <Compile Include="Dependencies\ScopeRelated\IInstancePerLifetimeScopeDependency.cs" />
-    <Compile Include="Dependencies\ScopeRelated\IInstancePerRequestDependency.cs" />
-    <Compile Include="Dependencies\ScopeRelated\SingleInstanceDependency.cs" />
-    <Compile Include="Encoding\IUtf8Converter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utf8Converter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PortkablePass.Interfaces\PortkablePass.Interfaces.csproj">
+      <Project>{06145c16-282b-4190-8124-b58df8c1756c}</Project>
+      <Name>PortkablePass.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
