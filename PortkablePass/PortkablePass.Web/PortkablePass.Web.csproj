@@ -35,6 +35,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\PortkablePass.Web.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,6 +47,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Mvc5.4.0.0\lib\net451\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -53,6 +60,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -139,9 +149,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\BundleConfiguration.cs" />
+    <Compile Include="App_Start\FilterConfiguration.cs" />
+    <Compile Include="App_Start\InversionOfControlConfiguration.cs" />
+    <Compile Include="App_Start\RouteConfiguration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -202,6 +213,15 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PortkablePass.Interfaces\PortkablePass.Interfaces.csproj">
+      <Project>{06145c16-282b-4190-8124-b58df8c1756c}</Project>
+      <Name>PortkablePass.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

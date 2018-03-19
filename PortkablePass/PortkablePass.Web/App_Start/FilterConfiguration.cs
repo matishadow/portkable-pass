@@ -3,7 +3,7 @@ using System.Web.Mvc;
 
 namespace PortkablePass.Web
 {
-    public class FilterConfig
+    internal static class FilterConfiguration
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {

@@ -7,7 +7,7 @@ using System.Web.Routing;
 
 namespace PortkablePass.Web
 {
-    public class RouteConfig
+    internal static class RouteConfiguration
     {
         public static void RegisterRoutes(RouteCollection routes)
         {

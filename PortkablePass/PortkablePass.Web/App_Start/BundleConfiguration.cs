@@ -3,7 +3,7 @@ using System.Web.Optimization;
 
 namespace PortkablePass.Web
 {
-    public class BundleConfig
+    internal static class BundleConfiguration
     {
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
