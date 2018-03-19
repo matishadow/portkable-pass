@@ -41,8 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sha1Hasher.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PortkablePass.Interfaces\PortkablePass.Interfaces.csproj">
+      <Project>{06145c16-282b-4190-8124-b58df8c1756c}</Project>
+      <Name>PortkablePass.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

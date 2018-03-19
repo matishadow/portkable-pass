@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cryptography\ISha1Hasher.cs" />
     <Compile Include="Dependencies\IDependency.cs" />
     <Compile Include="Dependencies\RegistrationRelated\IAsImplementedInterfacesDependency.cs" />
     <Compile Include="Dependencies\RegistrationRelated\IAsSelfRegistrationDependency.cs" />
