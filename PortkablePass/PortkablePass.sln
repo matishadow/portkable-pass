@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Cryptography"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Mobile", "PortkablePass.Mobile\PortkablePass.Mobile.csproj", "{46BCD480-B236-4E11-93FF-5E925549E71F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Encoding", "PortkablePass.Encoding\PortkablePass.Encoding.csproj", "{562EE366-B3F0-46AE-8E32-381586435E24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{46BCD480-B236-4E11-93FF-5E925549E71F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46BCD480-B236-4E11-93FF-5E925549E71F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{46BCD480-B236-4E11-93FF-5E925549E71F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{562EE366-B3F0-46AE-8E32-381586435E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562EE366-B3F0-46AE-8E32-381586435E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562EE366-B3F0-46AE-8E32-381586435E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562EE366-B3F0-46AE-8E32-381586435E24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

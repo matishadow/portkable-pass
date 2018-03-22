@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cryptography\IHmacSha1Generator.cs" />
+    <Compile Include="Cryptography\ISha1Hasher.cs" />
     <Compile Include="Dependencies\IDependency.cs" />
     <Compile Include="Dependencies\RegistrationRelated\IAsImplementedInterfacesDependency.cs" />
     <Compile Include="Dependencies\RegistrationRelated\IAsSelfRegistrationDependency.cs" />
@@ -48,6 +50,7 @@
     <Compile Include="Dependencies\ScopeRelated\IInstancePerLifetimeScopeDependency.cs" />
     <Compile Include="Dependencies\ScopeRelated\IInstancePerRequestDependency.cs" />
     <Compile Include="Dependencies\ScopeRelated\SingleInstanceDependency.cs" />
+    <Compile Include="Encoding\IUtf8Converter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
