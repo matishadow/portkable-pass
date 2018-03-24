@@ -43,7 +43,7 @@ namespace PortkablePass.Tests.TestFixtures
             })]
         public byte[] TestComputeStringHash(string input, byte[] key)
         {
-            return generator.GenerateHmacSha1Hash(input, key);
+            return generator.GenerateHmacHash(input, key);
         }
 
         [TestCase(new byte[] {0x61, 0x61, 0x61},
@@ -68,7 +68,7 @@ namespace PortkablePass.Tests.TestFixtures
             })]
         public byte[] TestComputeStringHash(byte[] input, byte[] key)
         {
-            return generator.GenerateHmacSha1Hash(input, key);
+            return generator.GenerateHmacHash(input, key);
         }
 
 
@@ -76,13 +76,13 @@ namespace PortkablePass.Tests.TestFixtures
         [TestCase("", null)]
         public void TestNullArgumentGenerateHmacSha1Hash(string input, byte[] key)
         {
-            Assert.Throws<ArgumentNullException>(() => generator.GenerateHmacSha1Hash(input, key));
+            Assert.Throws<ArgumentNullException>(() => generator.GenerateHmacHash(input, key));
         }
 
         [TestCase("", new byte[] { })]
         public void TestEmptyKeyArgumentGenerateHmacSha1Hash(string input, byte[] key)
         {
-            Assert.Throws<ArgumentException>(() => generator.GenerateHmacSha1Hash(input, key));
+            Assert.Throws<ArgumentException>(() => generator.GenerateHmacHash(input, key));
         }
     }
 }

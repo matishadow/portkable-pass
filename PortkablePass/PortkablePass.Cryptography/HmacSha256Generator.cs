@@ -6,18 +6,18 @@ using PortkablePass.Interfaces.Encoding;
 
 namespace PortkablePass.Cryptography
 {
-    public class HmacSha1Generator : IHmacSha1Generator
+    public class HmacSha256Generator : IHmacSha256Generator
     {
         private readonly IUtf8Converter utf8Converter;
 
-        public HmacSha1Generator(IUtf8Converter utf8Converter)
+        public HmacSha256Generator(IUtf8Converter utf8Converter)
         {
             this.utf8Converter = utf8Converter;
         }
 
         public byte[] GenerateHmacHash(byte[] input, byte[] key)
         {
-            var hmacsha1 = new HMACSHA1(key);
+            var hmacsha1 = new HMACSHA256(key);
 
             return hmacsha1.ComputeHash(input);
         }

@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cryptography\IHmacGenerator.cs" />
+    <Compile Include="Cryptography\IHmacSha512Generator.cs" />
+    <Compile Include="Cryptography\IHmacSha256Generator.cs" />
     <Compile Include="Cryptography\IHmacSha1Generator.cs" />
     <Compile Include="Cryptography\ISha1Hasher.cs" />
     <Compile Include="Dependencies\IDependency.cs" />
