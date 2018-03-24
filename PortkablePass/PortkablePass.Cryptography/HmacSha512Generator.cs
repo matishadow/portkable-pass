@@ -26,7 +26,7 @@ namespace PortkablePass.Cryptography
         {
             byte[] inputBytes = utf8Converter.ConvertToBytes(input);
 
-            var hmacsha1 = new HMACSHA1(key);
+            var hmacsha1 = new HMACSHA512(key);
 
             return hmacsha1.ComputeHash(inputBytes);
         }
