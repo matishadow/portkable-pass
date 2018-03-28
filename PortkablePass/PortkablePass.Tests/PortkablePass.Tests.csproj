@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestFixtures\CharacterSpaceGeneratorTest.cs" />
     <Compile Include="TestFixtures\HmacSha1GeneratorTest.cs" />
     <Compile Include="TestFixtures\UppercaseCharacterSpaceGeneratorTest.cs" />
     <Compile Include="TestFixtures\DigitCharacterSpaceGeneratorTest.cs" />
