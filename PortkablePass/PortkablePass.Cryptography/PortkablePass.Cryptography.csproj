@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HmacSha512Generator.cs" />
+    <Compile Include="HmacSha256Generator.cs" />
     <Compile Include="HmacSha1Generator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sha1Hasher.cs" />
