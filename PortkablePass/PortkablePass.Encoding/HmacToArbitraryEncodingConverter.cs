@@ -73,7 +73,7 @@ namespace PortkablePass.Encoding
         {
             var fullLength = (int)Math.Ceiling(input.Count * 8 / Math.Log(encoding.Length, 2));
             for (int i = encoded.Length; i < fullLength; i++)
-                encoded.Append(encoding[0]);
+                encoded.Insert(0, encoding[0]);
         }
     }
 }

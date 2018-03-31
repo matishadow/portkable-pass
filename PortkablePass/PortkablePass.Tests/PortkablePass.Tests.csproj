@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="TestFixtures\CharacterSpaceGeneratorTest.cs" />
     <Compile Include="TestFixtures\HmacSha1GeneratorTest.cs" />
+    <Compile Include="TestFixtures\HmacToArbitraryEncodingConverterTest.cs" />
     <Compile Include="TestFixtures\UppercaseCharacterSpaceGeneratorTest.cs" />
     <Compile Include="TestFixtures\DigitCharacterSpaceGeneratorTest.cs" />
     <Compile Include="TestFixtures\SpecialCharacterSpaceGeneratorTest.cs" />
