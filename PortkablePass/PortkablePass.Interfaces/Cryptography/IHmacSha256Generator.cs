@@ -1,6 +1,6 @@
 ﻿namespace PortkablePass.Interfaces.Cryptography
 {
-    public interface IHmacSha1Generator : IHmacGenerator
+    public interface IHmacSha256Generator : IHmacGenerator
     {
     }
 }

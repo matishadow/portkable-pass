@@ -59,6 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TestFixtures\CharacterSpaceGeneratorTest.cs" />
+    <Compile Include="Mocks\Uft8ConverterMockCreator.cs" />
+    <Compile Include="TestFixtures\HmacSha512GeneratorTest.cs" />
+    <Compile Include="TestFixtures\HmacSha256GeneratorTest.cs" />
     <Compile Include="TestFixtures\HmacSha1GeneratorTest.cs" />
     <Compile Include="TestFixtures\HmacToArbitraryEncodingConverterTest.cs" />
     <Compile Include="TestFixtures\UppercaseCharacterSpaceGeneratorTest.cs" />

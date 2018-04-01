@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharacterSpaceGenerators\CharacterSpaceGenerator.cs" />
+    <Compile Include="HmacSha512Generator.cs" />
+    <Compile Include="HmacSha256Generator.cs" />
     <Compile Include="HmacSha1Generator.cs" />
     <Compile Include="CharacterSpaceGenerators\DigitCharacterSpaceGenerator.cs" />
     <Compile Include="CharacterSpaceGenerators\SpecialCharacterSpaceGenerator.cs" />
