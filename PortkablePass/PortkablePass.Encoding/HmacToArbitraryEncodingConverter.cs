@@ -20,7 +20,7 @@ namespace PortkablePass.Encoding
 
             ConvertRemaindersToString(remainders, encoded, encoding);
 
-            AppendLeadingZeroEquivalents(input, encoding, encoded);
+            AppendPaddingZeroEquivalents(input, encoding, encoded);
 
             return encoded.ToString();
         }
@@ -68,12 +68,12 @@ namespace PortkablePass.Encoding
             return remainders;
         }
 
-        private void AppendLeadingZeroEquivalents(IReadOnlyCollection<byte> input, 
+        private void AppendPaddingZeroEquivalents(IReadOnlyCollection<byte> input, 
             string encoding, StringBuilder encoded)
         {
             var fullLength = (int)Math.Ceiling(input.Count * 8 / Math.Log(encoding.Length, 2));
             for (int i = encoded.Length; i < fullLength; i++)
-                encoded.Insert(0, encoding[0]);
+                encoded.Append(encoding[0]);
         }
     }
 }
