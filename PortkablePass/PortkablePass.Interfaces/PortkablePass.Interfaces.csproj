@@ -53,6 +53,7 @@
     <Compile Include="Dependencies\ScopeRelated\IInstancePerLifetimeScopeDependency.cs" />
     <Compile Include="Dependencies\ScopeRelated\IInstancePerRequestDependency.cs" />
     <Compile Include="Dependencies\ScopeRelated\SingleInstanceDependency.cs" />
+    <Compile Include="Encoding\IPasswordTruncator.cs" />
     <Compile Include="Encoding\IUtf8Converter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
