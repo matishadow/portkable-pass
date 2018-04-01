@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mocks\Uft8ConverterMockCreator.cs" />
+    <Compile Include="TestFixtures\PasswordTruncatorTest.cs" />
     <Compile Include="TestFixtures\HmacSha512GeneratorTest.cs" />
     <Compile Include="TestFixtures\HmacSha256GeneratorTest.cs" />
     <Compile Include="TestFixtures\HmacSha1GeneratorTest.cs" />
