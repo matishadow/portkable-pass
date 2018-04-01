@@ -41,11 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cryptography\ICharacterSpaceGenerator.cs" />
     <Compile Include="Cryptography\IHmacGenerator.cs" />
     <Compile Include="Cryptography\IHmacSha512Generator.cs" />
     <Compile Include="Cryptography\IHmacSha256Generator.cs" />
     <Compile Include="Cryptography\IHmacSha1Generator.cs" />
     <Compile Include="Cryptography\ISha1Hasher.cs" />
+    <Compile Include="Cryptography\ISingularCharacterSpaceGenerator.cs" />
     <Compile Include="Dependencies\IDependency.cs" />
     <Compile Include="Dependencies\RegistrationRelated\IAsImplementedInterfacesDependency.cs" />
     <Compile Include="Dependencies\RegistrationRelated\IAsSelfRegistrationDependency.cs" />
@@ -53,9 +55,16 @@
     <Compile Include="Dependencies\ScopeRelated\IInstancePerLifetimeScopeDependency.cs" />
     <Compile Include="Dependencies\ScopeRelated\IInstancePerRequestDependency.cs" />
     <Compile Include="Dependencies\ScopeRelated\SingleInstanceDependency.cs" />
+    <Compile Include="Encoding\IHmacToArbitraryEncodingConverter.cs" />
     <Compile Include="Encoding\IPasswordTruncator.cs" />
     <Compile Include="Encoding\IUtf8Converter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PortkablePass.Enums\PortkablePass.Enums.csproj">
+      <Project>{0871cda8-2e3b-49e8-acfb-14555eced4c0}</Project>
+      <Name>PortkablePass.Enums</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

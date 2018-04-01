@@ -58,11 +58,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestFixtures\CharacterSpaceGeneratorTest.cs" />
     <Compile Include="Mocks\Uft8ConverterMockCreator.cs" />
     <Compile Include="TestFixtures\PasswordTruncatorTest.cs" />
     <Compile Include="TestFixtures\HmacSha512GeneratorTest.cs" />
     <Compile Include="TestFixtures\HmacSha256GeneratorTest.cs" />
     <Compile Include="TestFixtures\HmacSha1GeneratorTest.cs" />
+    <Compile Include="TestFixtures\HmacToArbitraryEncodingConverterTest.cs" />
+    <Compile Include="TestFixtures\UppercaseCharacterSpaceGeneratorTest.cs" />
+    <Compile Include="TestFixtures\DigitCharacterSpaceGeneratorTest.cs" />
+    <Compile Include="TestFixtures\SpecialCharacterSpaceGeneratorTest.cs" />
+    <Compile Include="TestFixtures\LowercaseCharacterSpaceGeneratorTest.cs" />
     <Compile Include="TestFixtures\Sha1HasherTest.cs" />
     <Compile Include="TestFixtures\Utf8ConverterTest.cs" />
     <Compile Include="TestFixtures\ExampleTest.cs" />
@@ -80,6 +86,10 @@
     <ProjectReference Include="..\PortkablePass.Encoding\PortkablePass.Encoding.csproj">
       <Project>{562ee366-b3f0-46ae-8e32-381586435e24}</Project>
       <Name>PortkablePass.Encoding</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortkablePass.Enums\PortkablePass.Enums.csproj">
+      <Project>{0871cda8-2e3b-49e8-acfb-14555eced4c0}</Project>
+      <Name>PortkablePass.Enums</Name>
     </ProjectReference>
     <ProjectReference Include="..\PortkablePass.Interfaces\PortkablePass.Interfaces.csproj">
       <Project>{06145c16-282b-4190-8124-b58df8c1756c}</Project>
