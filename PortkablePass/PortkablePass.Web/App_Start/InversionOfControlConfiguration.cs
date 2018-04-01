@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Web.Compilation;
 using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
@@ -27,7 +28,8 @@ namespace PortkablePass.Web
 
         private static IEnumerable<Assembly> GetPortkablePassAssemblies()
         {
-            List<Assembly> assemblies = AppDomain.CurrentDomain.GetAssemblies()
+            List<Assembly> assemblies = BuildManager.GetReferencedAssemblies()
+                .Cast<Assembly>()
                 .Where(assembly => assembly.FullName.StartsWith("PortkablePass"))
                 .ToList();
 
@@ -161,10 +163,10 @@ namespace PortkablePass.Web
 
         private static Type[] FilterTypesByInterfaces(IEnumerable<Type> types, params Type[] interfaces)
         {
-            return interfaces
-                .Aggregate(types, (current, filteringInterface) =>
-                    current.Where(t => typeof(IInstancePerDependency).IsAssignableFrom(t)))
-                .ToArray();
+            return (from type in types
+                let hasAllInterfaces = interfaces.All(filteringInterface => filteringInterface.IsAssignableFrom(type))
+                where hasAllInterfaces
+                select type).ToArray();
         }
     }
 }

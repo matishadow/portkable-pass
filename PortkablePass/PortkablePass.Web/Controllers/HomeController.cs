@@ -3,28 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PortkablePass.Enums;
+using PortkablePass.Interfaces.Cryptography;
+using PortkablePass.Interfaces.Encoding;
 
 namespace PortkablePass.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IPasswordGenerator passwordGenerator;
+
+        public HomeController(IPasswordGenerator passwordGenerator)
+        {
+            this.passwordGenerator = passwordGenerator;
+        }
+
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        [HttpPost]
+        public string GeneratePassword(string masterPassword, string domainName, int length,
+            CharacterSpace characterSpace, HmacGenerator hmacGenerator)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return passwordGenerator.GeneratePassword(domainName, masterPassword, length, 
+                hmacGenerator, characterSpace);
         }
     }
 }

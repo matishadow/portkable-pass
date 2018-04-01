@@ -2,10 +2,13 @@
 using System.Text;
 using PortkablePass.Enums;
 using PortkablePass.Interfaces.Cryptography;
+using PortkablePass.Interfaces.Dependencies.RegistrationRelated;
+using PortkablePass.Interfaces.Dependencies.ScopeRelated;
 
 namespace PortkablePass.Cryptography.CharacterSpaceGenerators
 {
-    public class CharacterSpaceGenerator : ICharacterSpaceGenerator
+    public class CharacterSpaceGenerator : ICharacterSpaceGenerator,
+        IInstancePerRequestDependency, IAsImplementedInterfacesDependency
     {
         private readonly IEnumerable<ISingularCharacterSpaceGenerator> singularCharacterSpaceGenerators;
 

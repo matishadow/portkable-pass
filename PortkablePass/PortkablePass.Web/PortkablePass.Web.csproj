@@ -193,8 +193,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -218,6 +216,18 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PortkablePass.Cryptography\PortkablePass.Cryptography.csproj">
+      <Project>{5655224b-c4e0-4a34-be6f-29eccef964db}</Project>
+      <Name>PortkablePass.Cryptography</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortkablePass.Encoding\PortkablePass.Encoding.csproj">
+      <Project>{562ee366-b3f0-46ae-8e32-381586435e24}</Project>
+      <Name>PortkablePass.Encoding</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortkablePass.Enums\PortkablePass.Enums.csproj">
+      <Project>{0871cda8-2e3b-49e8-acfb-14555eced4c0}</Project>
+      <Name>PortkablePass.Enums</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PortkablePass.Interfaces\PortkablePass.Interfaces.csproj">
       <Project>{06145c16-282b-4190-8124-b58df8c1756c}</Project>
       <Name>PortkablePass.Interfaces</Name>
