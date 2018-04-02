@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using PortkablePass.Enums;
 using PortkablePass.Interfaces.Cryptography;
+using PortkablePass.Interfaces.Dependencies.RegistrationRelated;
+using PortkablePass.Interfaces.Dependencies.ScopeRelated;
 
 namespace PortkablePass.Cryptography
 {
-    public class HmacGeneratorResolver : IHmacGeneratorResolver
+    public class HmacGeneratorResolver : IHmacGeneratorResolver,
+        IInstancePerRequestDependency, IAsImplementedInterfacesDependency
     {
         private readonly IEnumerable<IHmacGenerator> hmacGenerators;
 

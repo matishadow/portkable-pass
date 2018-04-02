@@ -50,6 +50,7 @@
     <Compile Include="CharacterSpaceGenerators\SpecialCharacterSpaceGenerator.cs" />
     <Compile Include="CharacterSpaceGenerators\UppercaseCharacterSpaceGenerator.cs" />
     <Compile Include="CharacterSpaceGenerators\LowercaseCharacterSpaceGenerator.cs" />
+    <Compile Include="PasswordGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sha1Hasher.cs" />
   </ItemGroup>

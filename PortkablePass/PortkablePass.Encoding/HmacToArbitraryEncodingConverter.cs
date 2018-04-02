@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using PortkablePass.Interfaces.Dependencies.RegistrationRelated;
+using PortkablePass.Interfaces.Dependencies.ScopeRelated;
 using PortkablePass.Interfaces.Encoding;
 
 namespace PortkablePass.Encoding
 {
-    public class HmacToArbitraryEncodingConverter : IHmacToArbitraryEncodingConverter
+    public class HmacToArbitraryEncodingConverter : IHmacToArbitraryEncodingConverter,
+        IInstancePerRequestDependency, IAsImplementedInterfacesDependency
     {
         public string ConvertToArbitraryEncodedString(byte[] input, string encoding)
         {

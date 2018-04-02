@@ -47,6 +47,7 @@
     <Compile Include="Cryptography\IHmacSha512Generator.cs" />
     <Compile Include="Cryptography\IHmacSha256Generator.cs" />
     <Compile Include="Cryptography\IHmacSha1Generator.cs" />
+    <Compile Include="Cryptography\IPasswordGenerator.cs" />
     <Compile Include="Cryptography\ISha1Hasher.cs" />
     <Compile Include="Cryptography\ISingularCharacterSpaceGenerator.cs" />
     <Compile Include="Dependencies\IDependency.cs" />
