@@ -2,10 +2,6 @@
 @{
     ViewBag.Title = "Portkable Pass";
 }
-@section Scripts
-{
-    <script src="@Url.Content("~/Scripts/portkable-pass.js")"></script>
-}
 
 <div class="container pp-container">
         <div class="jumbotron text-center">
@@ -16,13 +12,13 @@
         <div class="form-group row">
             <label for="inputEmail3" class="col-sm-4 col-form-label">Domain:</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputEmail3">
+                <input type="text" class="form-control" id="domainNameTextBox">
             </div>
         </div>
         <div class="form-group row">
             <label for="inputPassword3" class="col-sm-4 col-form-label">Password:</label>
             <div class="col-sm-8">
-                <input type="password" class="form-control" id="inputPassword3">
+                <input type="password" class="form-control" id="masterPasswordTextBox">
             </div>
         </div>
         <div class="form-group row">
@@ -37,19 +33,19 @@
                 <legend class="col-form-label col-sm-4 pt-0">Hash function</legend>
                 <div class="col-sm-8">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="@HmacGenerator.Sha1">
+                        <input class="form-check-input hashCheckBox" type="radio" name="gridRadios" id="sha1RadioButton" value="@HmacGenerator.Sha1">
                         <label class="form-check-label" for="gridRadios1">
                             SHA-1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="@HmacGenerator.Sha256">
+                        <input class="form-check-input hashCheckBox" type="radio" name="gridRadios" id="sha256RadioButton" value="@HmacGenerator.Sha256">
                         <label class="form-check-label" for="gridRadios2">
                             SHA-256
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="@HmacGenerator.Sha512" checked>
+                        <input class="form-check-input hashCheckBox" type="radio" name="gridRadios" id="sha512RadioButton" value="@HmacGenerator.Sha512" checked>
                         <label class="form-check-label" for="gridRadios2">
                             SHA-512
                         </label>
@@ -61,26 +57,26 @@
             <div class="col-sm-4">Characters</div>
             <div class="col-sm-8">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck1" checked>
-                    <label class="form-check-label" for="gridCheck1">
+                    <input class="form-check-input" type="checkbox" id="uppercaseSpaceCheckBox" value="@((int)CharacterSpace.Uppercase)" checked>
+                    <label class="form-check-label" for="uppercaseSpaceCheckBox">
                         ABCDEFGHIJKLMNOPQRSTUVWXYZ
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
-                    <label class="form-check-label" for="gridCheck1">
+                    <input class="form-check-input" type="checkbox" id="lowercaseSpaceCheckBox" value="@((int)CharacterSpace.Lowercase)" checked>
+                    <label class="form-check-label" for="lowercaseSpaceCheckBox">
                         abcdefghijklmnopqrstuvwxyz
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck3" checked>
-                    <label class="form-check-label" for="gridCheck1">
+                    <input class="form-check-input" type="checkbox" id="digitsSpaceCheckBox" value="@((int)CharacterSpace.Digits)" checked>
+                    <label class="form-check-label" for="digitsSpaceCheckBox">
                         0123456789
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck4" checked>
-                    <label class="form-check-label" for="gridCheck1">
+                    <input class="form-check-input" type="checkbox" id="specialSpaceCheckBox" value="@((int)CharacterSpace.Special)" checked>
+                    <label class="form-check-label" for="specialSpaceCheckBox">
                         `~!@@#$%^&*()_-+={}|[]\:";'<>?,./
                     </label>
                 </div>
@@ -94,10 +90,75 @@
                         <input type="range" min="1" max="30" value="16" class="slider-max-width" id="passwordRange">
                     </div>
                     <div class="col-sm-4">
-                        <input type="number" class="form-control form-control-sm" id="lengthValue" value="10">
+                        <input type="number" class="form-control form-control-sm" id="lengthValue" value="16">
                     </div>
                 </div>
             </div>
         </div>
     </form>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var slider = $("#passwordRange");
+        var output = $("#lengthValue");
+
+        slider.on("input",
+            function() {
+                output.val(slider.val());
+                updateGeneratedPassword();
+            });
+        output.on("input",
+            function () {
+                slider.val(output.val());
+                updateGeneratedPassword();
+            });
+
+        $("#domainNameTextBox").on("input", updateGeneratedPassword);
+        $("#masterPasswordTextBox").on("input", updateGeneratedPassword);
+
+        $("#sha1RadioButton").on("change", updateGeneratedPassword);
+        $("#sha256RadioButton").on("change", updateGeneratedPassword);
+        $("#sha512RadioButton").on("change", updateGeneratedPassword);
+
+        refreshCharacterSpace('#uppercaseSpaceCheckBox', '@((int)CharacterSpace.Uppercase)');
+        refreshCharacterSpace('#lowercaseSpaceCheckBox', '@((int)CharacterSpace.Lowercase)');
+        refreshCharacterSpace('#digitsSpaceCheckBox', '@((int)CharacterSpace.Digits)');
+        refreshCharacterSpace('#specialSpaceCheckBox', '@((int)@CharacterSpace.Special)');
+    });
+
+    var updateGeneratedPassword = function() {
+        var passwordGeneration = {
+            domainName: $('#domainNameTextBox').val(),
+            masterPassword: $('#masterPasswordTextBox').val(),
+            hashFunction: $('.hashCheckBox:checked').val(),
+            characterSpace: $('#uppercaseSpaceCheckBox').val() |
+                $('#lowercaseSpaceCheckBox').val() |
+                $('#digitsSpaceCheckBox').val() |
+                $('#specialSpaceCheckBox').val(),
+            passwordLength: $('#lengthValue').val()
+        };
+
+        if (!passwordGeneration.domainName || !passwordGeneration.masterPassword)
+            return;
+
+        $.ajax({
+            url: "/Home/GeneratePassword",
+            type: "POST",
+            dataType: 'json',
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(passwordGeneration),
+            success: function (result) {
+                $('#generatedPassword').val(unescape(result.Value));
+            }
+        });
+    }
+
+    var refreshCharacterSpace = function (checkboxId, characterSpace) {
+        $(checkboxId).on('change', function () {
+            this.value = this.checked ? characterSpace : '@((int)CharacterSpace.None)';
+            updateGeneratedPassword();
+        });
+    }
+
+</script>

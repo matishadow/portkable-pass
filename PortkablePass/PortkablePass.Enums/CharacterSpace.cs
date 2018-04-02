@@ -5,9 +5,10 @@ namespace PortkablePass.Enums
     [Flags]
     public enum CharacterSpace
     {
-        Lowercase = 1 << 0,
-        Uppercase = 1 << 2,
-        Digits = 1 << 3,
-        Special = 1 << 4
+        None = 0b0,
+        Lowercase = 0b1,
+        Uppercase = 0b10,
+        Digits = 0b100,
+        Special = 0b1000
     }
 }

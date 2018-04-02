@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using PortkablePass.Enums;
 using PortkablePass.Interfaces.Cryptography;
 using PortkablePass.Interfaces.Encoding;
+using PortkablePass.Web.Models;
 
 namespace PortkablePass.Web.Controllers
 {
@@ -25,11 +26,16 @@ namespace PortkablePass.Web.Controllers
         }
 
         [HttpPost]
-        public string GeneratePassword(string masterPassword, string domainName, int length,
-            CharacterSpace characterSpace, HmacGenerator hmacGenerator)
+        public ActionResult GeneratePassword(PasswordGeneration passwordGeneration)
         {
-            return passwordGenerator.GeneratePassword(domainName, masterPassword, length, 
-                hmacGenerator, characterSpace);
+            var generatedPassword = new GeneratedPassword
+            {
+                Value = passwordGenerator.GeneratePassword(passwordGeneration.DomainName,
+                    passwordGeneration.MasterPassword, passwordGeneration.PasswordLength,
+                    passwordGeneration.HashFunction, passwordGeneration.CharacterSpace)
+            };
+
+            return Json(generatedPassword);
         }
     }
 }
