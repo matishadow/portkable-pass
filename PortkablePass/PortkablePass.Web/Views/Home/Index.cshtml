@@ -1,31 +1,103 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@using PortkablePass.Enums
+@{
+    ViewBag.Title = "Portkable Pass";
+}
+@section Scripts
+{
+    <script src="@Url.Content("~/Scripts/portkable-pass.js")"></script>
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+<div class="container pp-container">
+        <div class="jumbotron text-center">
+            <h1>Portkable Pass</h1>
+        </div>
+    
+    <form>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-4 col-form-label">Domain:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputEmail3">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-4 col-form-label">Password:</label>
+            <div class="col-sm-8">
+                <input type="password" class="form-control" id="inputPassword3">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-4 col-form-label">Generated Password:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="generatedPassword">
+            </div>
+        </div>
+        <br/> <br />
+        <fieldset class="form-group">
+            <div class="row">
+                <legend class="col-form-label col-sm-4 pt-0">Hash function</legend>
+                <div class="col-sm-8">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="@HmacGenerator.Sha1">
+                        <label class="form-check-label" for="gridRadios1">
+                            SHA-1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="@HmacGenerator.Sha256">
+                        <label class="form-check-label" for="gridRadios2">
+                            SHA-256
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="@HmacGenerator.Sha512" checked>
+                        <label class="form-check-label" for="gridRadios2">
+                            SHA-512
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <div class="form-group row">
+            <div class="col-sm-4">Characters</div>
+            <div class="col-sm-8">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1" checked>
+                    <label class="form-check-label" for="gridCheck1">
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck2" checked>
+                    <label class="form-check-label" for="gridCheck1">
+                        abcdefghijklmnopqrstuvwxyz
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck3" checked>
+                    <label class="form-check-label" for="gridCheck1">
+                        0123456789
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck4" checked>
+                    <label class="form-check-label" for="gridCheck1">
+                        `~!@@#$%^&*()_-+={}|[]\:";'<>?,./
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-4">Password length</div>
+            <div class="col-sm-8">
+                <div class="form-group row">
+                    <div class="col-sm-8">
+                        <input type="range" min="1" max="30" value="16" class="slider-max-width" id="passwordRange">
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control form-control-sm" id="lengthValue" value="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
