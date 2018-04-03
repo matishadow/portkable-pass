@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using PortkablePass.Interfaces.Dependencies.RegistrationRelated;
 using PortkablePass.Interfaces.Dependencies.ScopeRelated;
