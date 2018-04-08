@@ -11,7 +11,7 @@ using PortkablePass.Mobile.Models;
 
 namespace PortkablePass.Mobile
 {
-    [Activity(Label = "PortkablePass.Mobile", MainLauncher = true)]
+    [Activity(Label = "Portkable Pass", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
