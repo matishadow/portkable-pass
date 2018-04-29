@@ -44,23 +44,32 @@ namespace PortkablePass.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f06000b
-			public const int checkBox1 = 2131099659;
+			// aapt resource value: 0x7f06000f
+			public const int charactersTextView = 2131099663;
 			
-			// aapt resource value: 0x7f06000c
-			public const int checkBox2 = 2131099660;
-			
-			// aapt resource value: 0x7f06000d
-			public const int checkBox3 = 2131099661;
-			
-			// aapt resource value: 0x7f06000e
-			public const int checkBox4 = 2131099662;
+			// aapt resource value: 0x7f060012
+			public const int digitsCheckBox = 2131099666;
 			
 			// aapt resource value: 0x7f060004
-			public const int editText1 = 2131099652;
+			public const int domainEditText = 2131099652;
 			
-			// aapt resource value: 0x7f060005
-			public const int editText2 = 2131099653;
+			// aapt resource value: 0x7f060003
+			public const int domainTextView = 2131099651;
+			
+			// aapt resource value: 0x7f060008
+			public const int generatedEditText = 2131099656;
+			
+			// aapt resource value: 0x7f060007
+			public const int generatedTextView = 2131099655;
+			
+			// aapt resource value: 0x7f060009
+			public const int hashTextView = 2131099657;
+			
+			// aapt resource value: 0x7f060016
+			public const int lengthSeekBar = 2131099670;
+			
+			// aapt resource value: 0x7f060014
+			public const int lengthTextView = 2131099668;
 			
 			// aapt resource value: 0x7f060002
 			public const int linearLayout1 = 2131099650;
@@ -68,32 +77,41 @@ namespace PortkablePass.Android
 			// aapt resource value: 0x7f060000
 			public const int linearLayout2 = 2131099648;
 			
-			// aapt resource value: 0x7f060006
-			public const int linearLayout3 = 2131099654;
-			
-			// aapt resource value: 0x7f06000f
-			public const int linearLayout4 = 2131099663;
-			
-			// aapt resource value: 0x7f060008
-			public const int radioButton1 = 2131099656;
-			
-			// aapt resource value: 0x7f060009
-			public const int radioButton2 = 2131099657;
-			
 			// aapt resource value: 0x7f06000a
-			public const int radioButton3 = 2131099658;
+			public const int linearLayout3 = 2131099658;
 			
-			// aapt resource value: 0x7f060007
-			public const int radioGroup1 = 2131099655;
+			// aapt resource value: 0x7f060015
+			public const int linearLayout4 = 2131099669;
 			
-			// aapt resource value: 0x7f060010
-			public const int seekBar1 = 2131099664;
+			// aapt resource value: 0x7f060011
+			public const int lowercaseCheckBox = 2131099665;
+			
+			// aapt resource value: 0x7f060006
+			public const int masterEditText = 2131099654;
+			
+			// aapt resource value: 0x7f060005
+			public const int masterTextView = 2131099653;
+			
+			// aapt resource value: 0x7f06000b
+			public const int radioGroup1 = 2131099659;
+			
+			// aapt resource value: 0x7f06000c
+			public const int sha1RadioButton = 2131099660;
+			
+			// aapt resource value: 0x7f06000d
+			public const int sha256RadioButton = 2131099661;
+			
+			// aapt resource value: 0x7f06000e
+			public const int sha512RadioButton = 2131099662;
+			
+			// aapt resource value: 0x7f060013
+			public const int specialCheckBox = 2131099667;
 			
 			// aapt resource value: 0x7f060001
 			public const int textView1 = 2131099649;
 			
-			// aapt resource value: 0x7f060003
-			public const int textView2 = 2131099651;
+			// aapt resource value: 0x7f060010
+			public const int uppercaseCheckBox = 2131099664;
 			
 			static Id()
 			{

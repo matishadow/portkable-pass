@@ -26,13 +26,13 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/textView2"
+            android:id="@+id/domainTextView"
             android:layout_marginLeft="10.0dp"
             android:gravity="center" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/editText1"
+            android:id="@+id/domainEditText"
             android:layout_marginRight="10.0dp"
             android:layout_marginLeft="5.0dp" />
     </LinearLayout>
@@ -46,14 +46,14 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/textView2"
+            android:id="@+id/masterTextView"
             android:layout_marginLeft="10.0dp"
             android:gravity="center" />
         <EditText
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/editText2"
+            android:id="@+id/masterEditText"
             android:layout_marginRight="10.0dp" />
     </LinearLayout>
     <LinearLayout
@@ -67,13 +67,13 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/textView2"
+            android:id="@+id/generatedTextView"
             android:layout_marginLeft="10.0dp"
             android:gravity="center" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/editText1"
+            android:id="@+id/generatedEditText"
             android:layout_marginRight="10.0dp"
             android:layout_marginLeft="5.0dp" />
     </LinearLayout>
@@ -87,7 +87,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/textView2"
+            android:id="@+id/hashTextView"
             android:layout_marginLeft="10.0dp"
             android:gravity="center"
             android:layout_marginRight="60.0dp" />
@@ -109,17 +109,17 @@
                     android:layout_height="wrap_content"
                     android:checked="true"
                     android:text="SHA-1"
-                    android:id="@+id/radioButton1" />
+                    android:id="@+id/sha1RadioButton" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="SHA-256"
-                    android:id="@+id/radioButton2" />
+                    android:id="@+id/sha256RadioButton" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="SHA-512"
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/sha512RadioButton"
                     android:checked="true" />
             </RadioGroup>
         </LinearLayout>
@@ -134,7 +134,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/textView2"
+            android:id="@+id/charactersTextView"
             android:layout_marginLeft="10.0dp"
             android:gravity="center"
             android:layout_marginRight="86.5dp" />
@@ -149,22 +149,22 @@
                 android:text="Uppercase"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox1" />
+                android:id="@+id/uppercaseCheckBox" />
             <CheckBox
                 android:text="Lowercase"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox2" />
+                android:id="@+id/lowercaseCheckBox" />
             <CheckBox
                 android:text="Digits"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox3" />
+                android:id="@+id/digitsCheckBox" />
             <CheckBox
                 android:text="Special"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/checkBox4" />
+                android:id="@+id/specialCheckBox" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -177,7 +177,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/textView2"
+            android:id="@+id/lengthTextView"
             android:layout_marginLeft="10.0dp"
             android:gravity="center" />
         <LinearLayout
@@ -188,7 +188,7 @@
             <SeekBar
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/seekBar1"
+                android:id="@+id/lengthSeekBar"
                 android:max="30"
                 android:progress="16" />
         </LinearLayout>
