@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:id="@+id/linearLayout2">
+    <TextView
+        android:text="Portkable Pass"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="32sp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="25.0dp"
+        android:layout_marginTop="20.0dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="46.0dp"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Domain:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/domainTextView"
+            android:layout_marginLeft="10.0dp"
+            android:gravity="center" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/domainEditText"
+            android:layout_marginRight="10.0dp"
+            android:layout_marginLeft="5.0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="46.0dp"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Master Password:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/masterTextView"
+            android:layout_marginLeft="10.0dp"
+            android:gravity="center" />
+        <EditText
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/masterEditText"
+            android:layout_marginRight="10.0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="66.0dp"
+        android:id="@+id/linearLayout1"
+        android:layout_marginBottom="30.0dp">
+        <TextView
+            android:text="Generated Password:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/generatedTextView"
+            android:layout_marginLeft="10.0dp"
+            android:gravity="center" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/generatedEditText"
+            android:layout_marginRight="10.0dp"
+            android:layout_marginLeft="5.0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="98.0dp"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Hash function"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/hashTextView"
+            android:layout_marginLeft="10.0dp"
+            android:gravity="center"
+            android:layout_marginRight="60.0dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout3">
+            <RadioGroup
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/hashRadioGroup">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="SHA-1"
+                    android:id="@+id/sha1RadioButton" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SHA-256"
+                    android:id="@+id/sha256RadioButton" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SHA-512"
+                    android:id="@+id/sha512RadioButton"
+                    android:checked="true" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="128.0dp"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Characters"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/charactersTextView"
+            android:layout_marginLeft="10.0dp"
+            android:gravity="center"
+            android:layout_marginRight="86.5dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout3">
+            <CheckBox
+                android:text="Uppercase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/uppercaseCheckBox"
+                android:checked="true" />
+            <CheckBox
+                android:text="Lowercase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lowercaseCheckBox"
+                android:checked="true" />
+            <CheckBox
+                android:text="Digits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/digitsCheckBox"
+                android:checked="true" />
+            <CheckBox
+                android:text="Special"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/specialCheckBox"
+                android:checked="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="46.0dp"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Password length"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/lengthTextView"
+            android:layout_marginLeft="10.0dp"
+            android:gravity="center" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout4">
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lengthSeekBar"
+                android:max="30"
+                android:progress="16" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
