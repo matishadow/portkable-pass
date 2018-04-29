@@ -36,10 +36,10 @@ namespace PortkablePass.Android
                 });
             ICharacterSpaceGenerator characterSpaceGenerator = new CharacterSpaceGenerator(new List<ISingularCharacterSpaceGenerator>
             {
-                new UppercaseCharacterSpaceGenerator(),
-                new LowercaseCharacterSpaceGenerator(),
                 new DigitCharacterSpaceGenerator(),
-                new SpecialCharacterSpaceGenerator()
+                new SpecialCharacterSpaceGenerator(),
+                new UppercaseCharacterSpaceGenerator(),
+                new LowercaseCharacterSpaceGenerator()
             });
             IHmacToArbitraryEncodingConverter hmacToArbitraryEncodingConverter = new HmacToArbitraryEncodingConverter();
 
