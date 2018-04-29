@@ -9,13 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Tests", "Port
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Mobile", "PortkablePass.Mobile\PortkablePass.Mobile.csproj", "{46BCD480-B236-4E11-93FF-5E925549E71F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Enums", "PortkablePass.Enums\PortkablePass.Enums.csproj", "{F3D310AB-5FEB-4FAD-B7FF-3A203C1A68C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortkablePass.Enums", "PortkablePass.Enums\PortkablePass.Enums.csproj", "{F3D310AB-5FEB-4FAD-B7FF-3A203C1A68C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Interfaces", "PortkablePass.Interfaces\PortkablePass.Interfaces.csproj", "{3E27F4B3-1DB5-4833-AF15-CA05C119FBC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortkablePass.Interfaces", "PortkablePass.Interfaces\PortkablePass.Interfaces.csproj", "{3E27F4B3-1DB5-4833-AF15-CA05C119FBC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Encoding", "PortkablePass.Encoding\PortkablePass.Encoding.csproj", "{E56781CE-02C5-4AEC-AFA4-3C4901698E73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortkablePass.Encoding", "PortkablePass.Encoding\PortkablePass.Encoding.csproj", "{E56781CE-02C5-4AEC-AFA4-3C4901698E73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Cryptography", "PortkablePass.Cryptography\PortkablePass.Cryptography.csproj", "{561C64CE-A705-486F-863B-C577FAF48AF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortkablePass.Cryptography", "PortkablePass.Cryptography\PortkablePass.Cryptography.csproj", "{561C64CE-A705-486F-863B-C577FAF48AF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortkablePass.Android", "PortkablePass.Android\PortkablePass.Android.csproj", "{1E8CB004-4D31-4CD0-9341-2F39FE779D47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,12 @@ Global
 		{561C64CE-A705-486F-863B-C577FAF48AF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{561C64CE-A705-486F-863B-C577FAF48AF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{561C64CE-A705-486F-863B-C577FAF48AF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E8CB004-4D31-4CD0-9341-2F39FE779D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E8CB004-4D31-4CD0-9341-2F39FE779D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E8CB004-4D31-4CD0-9341-2F39FE779D47}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1E8CB004-4D31-4CD0-9341-2F39FE779D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E8CB004-4D31-4CD0-9341-2F39FE779D47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E8CB004-4D31-4CD0-9341-2F39FE779D47}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

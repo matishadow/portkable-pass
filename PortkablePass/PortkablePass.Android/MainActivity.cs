@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace PortkablePass.Android
 {
-    [Activity(Label = "PortkablePass.Android", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "PortkablePass.Android", MainLauncher = true, Icon = "@mipmap/icon", Theme = "@style/Theme.Custom")]
     public class MainActivity : Activity
     {
         int count = 1;
@@ -16,11 +16,9 @@ namespace PortkablePass.Android
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.myButton);
+            //Button button = FindViewById<Button>(Resource.Id.myButton);
 
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+            //button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
         }
     }
 }
