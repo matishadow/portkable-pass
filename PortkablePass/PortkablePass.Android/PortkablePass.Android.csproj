@@ -97,6 +97,24 @@
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PortkablePass.Cryptography\PortkablePass.Cryptography.csproj">
+      <Project>{561c64ce-a705-486f-863b-c577faf48af3}</Project>
+      <Name>PortkablePass.Cryptography</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortkablePass.Encoding\PortkablePass.Encoding.csproj">
+      <Project>{e56781ce-02c5-4aec-afa4-3c4901698e73}</Project>
+      <Name>PortkablePass.Encoding</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortkablePass.Enums\PortkablePass.Enums.csproj">
+      <Project>{f3d310ab-5feb-4fad-b7ff-3a203c1a68c2}</Project>
+      <Name>PortkablePass.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortkablePass.Interfaces\PortkablePass.Interfaces.csproj">
+      <Project>{3e27f4b3-1db5-4833-af15-ca05c119fbc1}</Project>
+      <Name>PortkablePass.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
 		Other similar extension points exist, see Microsoft.Common.targets.

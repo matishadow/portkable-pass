@@ -62,6 +62,9 @@ namespace PortkablePass.Android
 			// aapt resource value: 0x7f060007
 			public const int generatedTextView = 2131099655;
 			
+			// aapt resource value: 0x7f06000b
+			public const int hashRadioGroup = 2131099659;
+			
 			// aapt resource value: 0x7f060009
 			public const int hashTextView = 2131099657;
 			
@@ -91,9 +94,6 @@ namespace PortkablePass.Android
 			
 			// aapt resource value: 0x7f060005
 			public const int masterTextView = 2131099653;
-			
-			// aapt resource value: 0x7f06000b
-			public const int radioGroup1 = 2131099659;
 			
 			// aapt resource value: 0x7f06000c
 			public const int sha1RadioButton = 2131099660;
