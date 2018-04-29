@@ -149,22 +149,26 @@
                 android:text="Uppercase"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/uppercaseCheckBox" />
+                android:id="@+id/uppercaseCheckBox"
+                android:checked="true" />
             <CheckBox
                 android:text="Lowercase"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lowercaseCheckBox" />
+                android:id="@+id/lowercaseCheckBox"
+                android:checked="true" />
             <CheckBox
                 android:text="Digits"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/digitsCheckBox" />
+                android:id="@+id/digitsCheckBox"
+                android:checked="true" />
             <CheckBox
                 android:text="Special"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/specialCheckBox" />
+                android:id="@+id/specialCheckBox"
+                android:checked="true" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
